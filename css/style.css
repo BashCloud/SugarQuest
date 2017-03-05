@@ -2170,6 +2170,7 @@ label {
 	color: #fff;
 	margin: 0;
 	text-transform: none;
+	text-shadow: #171717 0px 0px 20px;
 }
 .single-page-header-text .tlt span[class^="char"] {
 	padding: 0 60px;			/* Added padding to stop clipping of text */
