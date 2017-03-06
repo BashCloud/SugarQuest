@@ -101,8 +101,8 @@
 		$mail->SMTPSecure 	= 'tls'; 
 		
 		$mail->SMTPAuth 	= true; 					// turn on SMTP authentication
-		$mail->Username 	= 'pulkit.svm@gmail.com';	// SMTP username (Usually same as email address)
-		$mail->Password 	= 'pick2forme';			// SMTP password (This includes all upper and lower case letters)
+		$mail->Username 	= 'youremail@example.com';	// SMTP username (Usually same as email address)
+		$mail->Password 	= 'YourPassword';			// SMTP password (This includes all upper and lower case letters)
 		
 		$mail->Send();
 		
