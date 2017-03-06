@@ -2223,17 +2223,17 @@ label {
 	height: 35px;
 	padding-top: 5px;
 	display: inline-block;
-	color: #252525;
-	margin: 0 3px;
-	background: rgba(255,255,255,0.65);
+    color: #fff;
+    margin: 0 3px;
+    background: rgba(0,0,0,0.7);
 	-webkit-border-radius: 32px;
 	   -moz-border-radius: 32px;
 	        border-radius: 32px;
 }
 .single-page-social-icons-list li a i:before { font-size: 14px; }
 .single-page-social-icons-list li a:hover {
-	background: #fff;
-	color: #000;
+	background: rgba(0,0,0,0.9);
+    color: #fff;
 }
 
 /**
@@ -2686,7 +2686,7 @@ label {
 	height: 60px;
 	padding-left: 25px;
 	padding-right: 25px;
-	background: #fcfcfc;
+	background: ##ededed;
 	color: #454545;
 	border: 1px solid #e5e5e5;
 }
@@ -3298,4 +3298,16 @@ blockquote,
 	.recipe-meta { padding: 20px 10px; }
 	#site-footer .widget-column { margin: 0; }
 	
+}
+.shortDetail{
+	color: #fff;
+	font-size: 1.8em;
+	padding:20px;
+	background-color: rgba(0,0,0,0.7);
+	font-family: cursive;
+}
+.aboutChef{
+	font-weight: 600;
+    text-align: justify;
+    color: #171717;
 }
