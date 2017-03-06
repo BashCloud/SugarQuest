@@ -4,8 +4,8 @@
 	 *  Edit your email details here...
 	 *  -----------------------------------------------------------------------
 	 */
-	$site_owners_email = 'youremail@example.com';	// Replace this with your own Email Address
-	$site_owners_name  = 'John Smith';		 		// Replace with your name
+	$site_owners_email = 'pulkit.cloud@gmail.com';	// Replace this with your own Email Address
+	$site_owners_name  = 'Pulkit Aggarwal';		 		// Replace with your name
 	
 	/**
 	 *  Get the user's input and put them into variables
@@ -69,7 +69,7 @@
 		/**
 		 *  Email message sent to the site owner (HTML Allowed)
 		 */
-		$mail_message  = '<h2>You have a new booking! Here are the details&hellip;</h2>';
+		$mail_message  = '<h2>You have a new Order! Here are the details&hellip;</h2>';
 		$mail_message .= '<br />';
 		$mail_message .= '<h3>Contact Details</h3>';
 		$mail_message .= '<strong>Name:</strong> ' . $res_name . '<br />';
@@ -87,7 +87,7 @@
 		
 		$mail->From 		= $res_email;
 		$mail->FromName 	= $res_name;
-		$mail->Subject 		= 'Reservation Booking';
+		$mail->Subject 		= 'Sugarquest: Online Booking';
 		$mail->AddAddress( $site_owners_email , $site_owners_name );
 		$mail->IsHTML(true);
 		$mail->Body 		= $mail_message;
@@ -101,8 +101,8 @@
 		$mail->SMTPSecure 	= 'tls'; 
 		
 		$mail->SMTPAuth 	= true; 					// turn on SMTP authentication
-		$mail->Username 	= 'youremail@example.com';	// SMTP username (Usually same as email address)
-		$mail->Password 	= 'YourPassword';			// SMTP password (This includes all upper and lower case letters)
+		$mail->Username 	= 'pulkit.svm@gmail.com';	// SMTP username (Usually same as email address)
+		$mail->Password 	= 'pick2forme';			// SMTP password (This includes all upper and lower case letters)
 		
 		$mail->Send();
 		
