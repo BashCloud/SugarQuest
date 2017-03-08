@@ -890,7 +890,7 @@ label {
 	background: url(../images/demo/parallax-backgrounds/parallax-01.jpg) repeat fixed;
 	padding: 140px 0 70px 0; 
 }
-#hungry-menu { padding: 140px 0 50px 0; }
+#MainMenu { padding: 140px 0 50px 0; }
 #hungry-slogan-01 {
 	background: url(../images/demo/parallax-backgrounds/parallax-02.jpg) repeat fixed;
 	padding: 140px 0;
@@ -898,6 +898,10 @@ label {
 #hungry-slogan-02 {
 	background: url(../images/demo/parallax-backgrounds/parallax-03.jpg) repeat fixed;
 	padding: 140px 0;
+}
+#hungry-slogan-03 .hungry-slogan-text{
+	padding: 90px 0;
+	color: #171717;
 }
 #hungry-staff { padding: 140px 0; }
 #hungry-gallery { padding: 140px 0 120px 0; }
@@ -2667,7 +2671,7 @@ label {
 .hungry-blog-date {	margin-bottom: 20px; }
 .hungry-blog-title {
 	font-size: 16px;
-	line-height: 20px;
+	line-height: 25px;
 	color: #000;
 	margin-bottom: 20px;
 	padding: 10px 30px 13px 30px;
@@ -3312,4 +3316,17 @@ blockquote,
 	font-weight: 600;
     text-align: justify;
     color: #171717;
+}
+.menuBtn{
+	border:1px solid #000;
+	padding:10px;
+	cursor: pointer;
+	background-color: #171717;
+	color: #eee;
+}
+.menuItems li{
+	color:#171717;
+}
+.menuColLeft{
+	float: right;
 }
