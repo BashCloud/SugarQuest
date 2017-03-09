@@ -102,7 +102,7 @@
 		
 		$mail->SMTPAuth 	= true; 					// turn on SMTP authentication
 		$mail->Username 	= 'sugarquest.orders@gmail.com';	// SMTP username (Usually same as email address)
-		$mail->Password 	= 'blakspeakers';			// SMTP password (This includes all upper and lower case letters)
+		$mail->Password 	= 'blackspeakers';			// SMTP password (This includes all upper and lower case letters)
 		
 		$mail->Send();
 		
