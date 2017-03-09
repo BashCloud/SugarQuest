@@ -1,5 +1,4 @@
 ﻿<?php
-	
 	/**
 	 *  Edit your email details here...
 	 *  -----------------------------------------------------------------------
@@ -16,7 +15,10 @@
 	$res_phone		= strip_tags( $_POST['res_phone'] );
 	$res_amount		= strip_tags( $_POST['res_amount'] );
 	$res_date		= strip_tags( $_POST['res_date'] );
-	$res_time		= strip_tags( $_POST['res_time'] );
+	$res_address 	= strip_tags( $_POST['res_address'] );
+	$res_city 		= strip_tags( $_POST['res_city'] );
+	$res_payment 	= strip_tags( $_POST['res_payment'] );
+	//$res_time		= strip_tags( $_POST['res_time'] );
 	$res_message	= strip_tags( $_POST['res_message'] );
 	
 	/**
@@ -46,17 +48,17 @@
 		$error['res_phone'] = $error_phone;
 	}
 	
-	if( empty( $res_amount ) ) {
-		$error['res_amount'] = $error_amount;
-	}
+	// if( empty( $res_amount ) ) {
+	// 	$error['res_amount'] = $error_amount;
+	// }
 	
 	if ( strlen( $res_date ) < 2 ) {
 		$error['res_date'] = $error_date;	
 	}
 	
-	if ( strlen( $res_time ) < 2 ) {
-		$error['res_time'] = $error_time;
-	}
+	// if ( strlen( $res_time ) < 2 ) {
+	// 	$error['res_time'] = $error_time;
+	// }
 	
 	/**
 	 *  If there's no errors, process the form
@@ -75,19 +77,21 @@
 		$mail_message .= '<strong>Name:</strong> ' . $res_name . '<br />';
 		$mail_message .= '<strong>Email Address:</strong> ' . $res_email . '<br />';
 		$mail_message .= '<strong>Contact Number:</strong> ' . $res_phone . '<br />';
-		$mail_message .= '<h3>Booking Details</h3>';
+		$mail_message .= '<h3>Order Details: </h3>' . $res_message . '<br />';
+		$mail_message .= '<h3>Delivery Details </h3>';
 		$mail_message .= '<strong>Date:</strong> ' . $res_date . '<br />';
-		$mail_message .= '<strong>Time:</strong> ' . $res_time . '<br />';
-		$mail_message .= '<strong>For:</strong> ' . $res_amount . ' People<br />';
-		if( ! empty( $res_message ) && $res_message !== null && $res_message !== '' ) {
-			$mail_message .= '<strong>Message:</strong> ' . $res_message . '<br />';
-		}
+		$mail_message .= '<strong>Address:</strong> ' . $res_address . '<br />';
+		$mail_message .= '<strong>City:</strong> ' . $res_city . '<br />';
+		$mail_message .= '<h3>Payment Options: </h3>' . $res_payment  . '<br />';
+		// if( ! empty( $res_message ) && $res_message !== null && $res_message !== '' ) {
+		// 	$mail_message .= '<strong>Message:</strong> ' . $res_message . '<br />';
+		// }
 		
 		$mail = new PHPMailer();
 		
 		$mail->From 		= $res_email;
 		$mail->FromName 	= $res_name;
-		$mail->Subject 		= 'Sugarquest: Online Booking';
+		$mail->Subject 		= 'Sugarquest|Online Order: '. $res_message ;
 		$mail->AddAddress( $site_owners_email , $site_owners_name );
 		$mail->IsHTML(true);
 		$mail->Body 		= $mail_message;
@@ -100,7 +104,7 @@
 		$mail->Port 		= 587;
 		$mail->SMTPSecure 	= 'tls'; 
 		
-		$mail->SMTPAuth 	= true; 					// turn on SMTP authentication
+		$mail->SMTPAuth 	= false; 					// turn on SMTP authentication
 		$mail->Username 	= 'sugarquest.orders@gmail.com';	// SMTP username (Usually same as email address)
 		$mail->Password 	= 'blackspeakers';			// SMTP password (This includes all upper and lower case letters)
 		
@@ -110,7 +114,7 @@
 		$response .= '<div class="reservation-confirmed">' . "\n";
 		$response .= '<i class="fa fa-thumbs-up"></i>' . "\n";
 		$response .= '<h4 class="reservation-confirmed-title">Thanks a lot!</h4>' . "\n";
-		$response .= '<p class="reservation-confirmed-text">Your party has requested a booking for <em>' . $res_time . '</em> on the date of <em>' . $res_date . '</em>. We\'ll be in touch soon to confirm your booking!</p>' . "\n";
+		$response .= '<p class="reservation-confirmed-text">You has requested an order for <em>' . $res_message  . '</em>, to be delivered on date: <em>' . $res_date . '</em>. We\'ll be in touch soon to confirm your order!</p>' . "\n";
 		$response .= '</div>' . "\n";
 		$response .= '</div>' . "\n";
 		
@@ -123,7 +127,7 @@
 		$response .= ( isset( $error['res_phone'] ) )	? '<p>' . $error['res_phone']	. '</p>' : null;
 		$response .= ( isset( $error['res_amount'] ) )	? '<p>' . $error['res_amount']	. '</p>' : null;
 		$response .= ( isset( $error['res_date'] ) )	? '<p>' . $error['res_date']	. '</p>' : null;
-		$response .= ( isset( $error['res_time'] ) )	? '<p>' . $error['res_time']	. '</p>' : null;
+		// $response .= ( isset( $error['res_time'] ) )	? '<p>' . $error['res_time']	. '</p>' : null;
 		
 		echo $response;
 
