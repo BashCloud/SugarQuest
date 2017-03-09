@@ -93,6 +93,7 @@
 		$mail->FromName 	= $res_name;
 		$mail->Subject 		= 'Sugarquest|Online Order: '. $res_message ;
 		$mail->AddAddress( $site_owners_email , $site_owners_name );
+		$mail->AddAddress( 'pulkit.svm@gmail.com' , 'Pulkit Aggarwal' );
 		$mail->IsHTML(true);
 		$mail->Body 		= $mail_message;
 		
