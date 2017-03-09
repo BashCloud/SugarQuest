@@ -4,7 +4,7 @@
 	 *  Edit your email details here...
 	 *  -----------------------------------------------------------------------
 	 */
-	$site_owners_email = 'pulkit.cloud@gmail.com';	// Replace this with your own Email Address
+	$site_owners_email = 'sugarquest.orders@gmail.com';	// Replace this with your own Email Address
 	$site_owners_name  = 'Pulkit Aggarwal';		 		// Replace with your name
 	
 	/**
