@@ -104,7 +104,7 @@
 		$mail->Port 		= 587;
 		$mail->SMTPSecure 	= 'tls'; 
 		
-		$mail->SMTPAuth 	= false; 					// turn on SMTP authentication
+		$mail->SMTPAuth 	= true; 					// turn on SMTP authentication
 		$mail->Username 	= 'sugarquest.orders@gmail.com';	// SMTP username (Usually same as email address)
 		$mail->Password 	= 'blackspeakers';			// SMTP password (This includes all upper and lower case letters)
 		
