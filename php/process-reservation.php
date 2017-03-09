@@ -4,7 +4,7 @@
 	 *  -----------------------------------------------------------------------
 	 */
 	$site_owners_email = 'sugarquest.orders@gmail.com';	// Replace this with your own Email Address
-	$site_owners_name  = 'Pulkit Aggarwal';		 		// Replace with your name
+	$site_owners_name  = 'Sugarquest';		 		// Replace with your name
 	
 	/**
 	 *  Get the user's input and put them into variables
