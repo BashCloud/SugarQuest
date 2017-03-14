@@ -1,14 +1,3 @@
-/**
- *
- *  ---------------------------------------------------------------------------
- *
- *  Template   : Hungry - A One-Page HTML Restaurant Template
- *  Author     : Subatomic Themes
- *  Author URI : http://themeforest.net/user/SubatomicThemes
- *  
- *  ---------------------------------------------------------------------------
- *
- */
 jQuery(document).ready(function($) {
 
 	"use strict";
