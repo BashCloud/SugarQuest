@@ -397,16 +397,20 @@ jQuery(document).ready(function($) {
 			var res_date	= $('input#res_date').val();
 			var res_time	= $('select#res_time').val();
 			var res_message	= $('textarea#res_message').val();
+            var res_address = $('textarea#res_address').val();
+            var res_city    = $('select#res_city').val();
+            var res_payment = $('select#res_payment').val();
 			
 			$.ajax({
 			
 				type	: 'post',
 				url		: 'php/process-reservation.php',
-				data	: 'res_name=' + res_name + '&res_email=' + res_email + '&res_phone=' + res_phone + '&res_amount=' + res_amount + '&res_date=' + res_date + '&res_time=' + res_time + '&res_message=' + res_message,
+				data	: 'res_name=' + res_name + '&res_email=' + res_email + '&res_phone=' + res_phone + '&res_amount=' + res_amount + '&res_date=' + res_date + '&res_time=' + res_time + '&res_message=' + res_message
+                + '&res_address=' + res_address + '&res_city=' + res_city + '&res_payment=' + res_payment,
 				success	: function(results) {
 				
 					$('#hungry-reservation-form-outcome').html(results);
-					$('#hungry_reservarion_form_outcome').slideDown( 2000 );
+					$('#hungry_reservarion_form_outcome').slideDown( 1000 );
 				
 				}
 			
