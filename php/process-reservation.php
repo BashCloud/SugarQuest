@@ -82,7 +82,7 @@
 		$mail_message .= '<strong>Date:</strong> ' . $res_date . '<br />';
 		$mail_message .= '<strong>Address:</strong> ' . $res_address . '<br />';
 		$mail_message .= '<strong>City:</strong> ' . $res_city . '<br />';
-		$mail_message .= '<h3>Payment Options: </h3>' . $res_payment  . '<br />';
+		$mail_message .= '<strong>Payment Options: </strong>' . $res_payment  . '<br />';
 		// if( ! empty( $res_message ) && $res_message !== null && $res_message !== '' ) {
 		// 	$mail_message .= '<strong>Message:</strong> ' . $res_message . '<br />';
 		// }
